@@ -1,0 +1,167 @@
+@use "./global" as *;
+
+.navbar {
+  background-color: $dark;
+  color: white;
+  position: sticky !important;
+
+  button {
+    border-color: white;
+    &:focus {
+      box-shadow: none;
+    }
+    svg {
+      color: $green;
+    }
+  }
+  .nav-item {
+    .nav-link {
+      color: white;
+      &:hover,
+      &:focus {
+        color: $green;
+      }
+    }
+  }
+  .search {
+    border-left: 2px solid $green;
+    color: $green;
+  }
+}
+.main-btn {
+  background-color: $red;
+  color: $yellow;
+  &:hover {
+    background-color: $red;
+    color: $dark;
+  }
+}
+.landing {
+  background-color: $dark;
+  height: calc(100vh - 73px);
+}
+.main-title {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    translate: -50% 0;
+    width: 160px;
+    height: 3px;
+    background-color: $green;
+  }
+}
+.services {
+  .icons {
+    height: 200px;
+    svg {
+      left: 50%;
+      translate: -50% 0;
+    }
+    .ico {
+      color: $green;
+    }
+    .num {
+      color: $sec-color;
+    }
+  }
+  .row h3 {
+    color: $yellow;
+  }
+}
+.portfolio {
+  background-color: #eff7fa;
+  ul {
+    .active {
+      color: $yellow;
+      background-color: $red;
+    }
+    li {
+      cursor: pointer;
+      &:hover:not(.active) {
+        color: $red;
+      }
+    }
+  }
+  .row {
+    .box {
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+      &::after {
+        content: attr(data-work);
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(51 209 204 / 76%);
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+      }
+      &:hover::after {
+        right: 0;
+      }
+    }
+  }
+}
+.about .des {
+  max-width: 500px;
+}
+.team {
+  background-color: $sec-color;
+  h2 {
+    color: $yellow;
+  }
+  .row h3 {
+    background-color: $green;
+  }
+}
+.project {
+  background-color: $dark;
+}
+.subscribe {
+  background-color: $yellow;
+  input[type="email"] {
+    border: none;
+    border-bottom: 1px solid white;
+    &::placeholder {
+      color: white;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  input[type="submit"] {
+    color: $yellow;
+    background-color: $dark;
+  }
+}
+footer {
+  background-color: $dark;
+  span:first-of-type {
+    color: $green;
+  }
+  span:last-of-type {
+    color: $yellow;
+  }
+}
+.facebook {
+  background-color: #1877f2;
+}
+.twitter {
+  background-color: #1da1f2;
+}
+.linkedin {
+  background-color: #0077b5;
+}
+.youtube {
+  background-color: red;
+}
